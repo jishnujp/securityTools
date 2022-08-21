@@ -4,16 +4,9 @@
 
 body{
     max-zoom: 100%;
-    min-width: 350px;
+    min-width: 3px;
 }
-@media all and  (min-width:960px){
-    body{
-        max-width:60%;
-        margin: auto;
-        box-shadow: 20px 20px 50px grey;
-        padding: 2em 2em;
-    }
-}
+
 h3{
     padding-bottom: 2px;
 }
@@ -30,7 +23,7 @@ h3{
 }
 .tester,
 .result{
-    text-align: center;
+    text-align: left;
     padding: 0 15px;
 }
 
@@ -38,6 +31,8 @@ h3{
     padding-right: 2px;
     color:rgb(100, 98, 98);
     font-size: 14px;
+
+    display: block;
 }
 main{
     max-width: 90%;
@@ -54,15 +49,35 @@ main{
     width: 100px;
     border-radius: 5px;
     display: block;
-    margin: auto;
     margin-top: 5px;
     padding: 5px;
 }
 .redbg{
     background-color: lightcoral;
     padding: 5px;
+    text-align: center;
 }
 .greenbg{
     background-color: lightgreen;
     padding: 5px;
+    text-align: center;
+}
+@media all and  (min-width:960px){
+    body{
+        max-width:60%;
+        margin: auto;
+        box-shadow: 20px 20px 50px grey;
+        padding: 2em 2em;
+    }
+    .label{
+        display: inline;
+    }
+    .tester, 
+    .result{
+        text-align: center;
+    }
+    .test_btn{
+        margin: auto;
+        margin-top: 5px;
+    }
 }
