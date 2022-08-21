@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Password Tester</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <h1>Check the strength of your Password</h1>
+        <p>
+            This app cross checks your password with the already leaked and publically available passwords set, without
+            compormising yours, using k anonimity model.
+        </p>
+        <h2>Why is it important?</h2>
+        <p>
+            We have a tendency to reuse passwords or use common and easy to remember passwords. So it is a good idea to
+            verify that our password is not already exposed during any data breach. If we are using already exposed
+            passwords, then you are facing a huge risk of compromising your account to a simple dictionary attack.We
+            have a
+            tendency to reuse passwords or use common and easy to remember passwords. So it is a good idea to verify
+            that
+            our password is not already exposed during any data breach. If we are using already exposed passwords, then
+            you
+            are facing a huge risk of compormsing your account to a simple dictinary attack.
+        </p>
+        <h3>Test Your Password</h3>
+        <div class="tester">
+                <div class="result">
+                    <p id="leak"></p>
+                </div>
+            <span class="label"> Password </span>
+            <span class="password_input"><input id='password' type="password"></span>
+            <span class="eye" onclick="visibility()"> 👁️</span>
+            <button class="test_btn" onclick="test()">Test</button>
+
+            <div class="notice">The password that you enter here will not leave your browser, i.e no one else (including
+                the developer of this site) cannot see it. Testing of your password is done by <a
+                    href="https://en.wikipedia.org/wiki/K-anonymity"> K- Anonymity Algorithm</a>, so that your
+                credentials are not compermised. </div>
+        </div>
+
+
+        
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        function visibility() {
+            var pass = document.getElementById("password");
+            if (pass.type == 'password') {
+                pass.setAttribute("type", "text");
+            } else {
+                pass.setAttribute("type", "password")
+            }
+        }
+
+    </script>
+    <script type="text/javascript" src="/pwdTest.js"></script>
+</body>
+
+</html>
